@@ -1,0 +1,3077 @@
+{
+	"info": {
+		"_postman_id": "948d8134-ef66-45da-ab30-78ed5131d74c",
+		"name": "Bolt API - Trips/Confirmed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "200",
+			"item": [
+				{
+					"name": "200 - Trips/Confirmed without parameters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"/*",
+									"pm.test(\"Confirmed status trips list is returned\", function () {",
+									"    const actualResponse = pm.response.json();",
+									"    for (var i = 0; i < actualResponse.length; i++) {",
+									"    pm.expect(actualResponse[i].status).to.eql(\"Confirmed\");}",
+									"});",
+									"*/",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid dueTimeAfterUTC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"/*",
+									"pm.test(\"Confirmed status trips list is returned\", function () {",
+									"    const actualResponse = pm.response.json();",
+									"    for (var i = 0; i < actualResponse.length; i++) {",
+									"    pm.expect(actualResponse[i].status).to.eql(\"Confirmed\");}",
+									"});",
+									"*/",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeAfterUTC={{dueTimeAfterWTRIPSconfirmed}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "{{dueTimeAfterWTRIPSconfirmed}}"
+								},
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid dueTimeBeforeUTC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBeforeUTC={{dueTimeBeforeWTRIPSconfirmed}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "{{dueTimeBeforeWTRIPSconfirmed}}"
+								},
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid dueTimeAfterUTC and dueTimeBeforeUTC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeAfterUTC={{dueTimeAfter}}&dueTimeBeforeUTC=",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "{{dueTimeAfter}}"
+								},
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "{{dueTimeBefore}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid driverId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"    ",
+									"pm.test(\"Driver's trips list returned is correct\", function () {",
+									"    const actualResponse = pm.response.json();",
+									"\tpm.expect(actualResponse.driverId).to.eql({driverId});",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?driverId={{driverId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "driverId",
+									"value": "{{driverId}}"
+								},
+								{
+									"key": "driverId",
+									"value": "665",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid array of driverIds",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"    ",
+									"pm.test(\"Driver's trips list returned is correct\", function () {",
+									"    const actualResponse = pm.response.json();",
+									"\tpm.expect(actualResponse.driverId).to.eql({driverId});",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?driverIds=31282,665",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "driverIds",
+									"value": "{{driverId}}",
+									"disabled": true
+								},
+								{
+									"key": "driverIds",
+									"value": "665",
+									"disabled": true
+								},
+								{
+									"key": "driverIds",
+									"value": "31282,665"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid geographySearch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puGeoSearchRadiusMiles=100000&puGeoSearchCenterLat=37&puGeoSearchCenterLon=-122",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "{{puGeoSearchRadiusMiles}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "{{puGeoSearchCenterLat}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "{{puGeoSearchCenterLon}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "100000"
+								},
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "37"
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "-122"
+								},
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid puCity",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puCity={{puCityPartial}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puCity",
+									"value": "{{puCity}}",
+									"disabled": true
+								},
+								{
+									"key": "puCity",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "puCity",
+									"value": "{{puCityPartial}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid puCounty",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puCounty={{puCountyPartial}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puCounty",
+									"value": "{{puCounty}}",
+									"disabled": true
+								},
+								{
+									"key": "puCounty",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "puCounty",
+									"value": "{{puCountyPartial}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid puState",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puState={{puState}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puState",
+									"value": "{{puState}}"
+								},
+								{
+									"key": "puState",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by 1 valid status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"    ",
+									"/*pm.test(\"Status' trips list returned is correct\", function () {",
+									"    const actualResponse = pm.response.json();",
+									"\tpm.expect(actualResponse.status).to.include({status});",
+									"});",
+									"*/"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?status={{statusVoid}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusConfirmed}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusOffered}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusAccepted}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusOnsite}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusOnboard}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusComplete}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusNoLoad}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusVoid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by multiple valid status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"    ",
+									"/*pm.test(\"Status' trips list returned is correct\", function () {",
+									"    const actualResponse = pm.response.json();",
+									"\tpm.expect(actualResponse.status).to.include({status});",
+									"});",
+									"*/"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?status={{statusAccepted}},{{statusComplete}},{{statusOnboard}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": " {{statusNoLoad}},{{statusConfirmed}},{{statusAccepted}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusAccepted}},{{statusComplete}},{{statusOnboard}}"
+								},
+								{
+									"key": "status",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by 1 valid serviceLevel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"    ",
+									"pm.test(\"ServiceLevels' trips list returned is correct\", function () {",
+									"    const actualResponse = pm.response.json();",
+									"    pm.expect(actualResponse.serviceLevel).to.include({serviceLevel});",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?serviceLevel={{serviceLevel10}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "serviceLevel",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel1}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel2}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel3}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel4}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel5}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel6}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel7}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel8}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel9}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel10}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by multiple valid serviceLevel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"    ",
+									"pm.test(\"ServiceLevels' trips list returned is correct\", function () {",
+									"    const actualResponse = pm.response.json();",
+									"    pm.expect(actualResponse.serviceLevel).to.include({serviceLevel});",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?serviceLevel={{serviceLevel7}},{{serviceLevel8}},{{serviceLevel9}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel1}},{{serviceLevel2}},{{serviceLevel3}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel4}},{{serviceLevel5}}, {{serviceLevel6}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel7}},{{serviceLevel8}},{{serviceLevel9}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid offset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?offset={{Offset10}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "{{Offset10}}"
+								},
+								{
+									"key": "offset",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "{{offsetNegative}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid top",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?top={{Top}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "top",
+									"value": "{{Top}}"
+								},
+								{
+									"key": "top",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "top",
+									"value": "{{topNegative}}",
+									"disabled": true
+								},
+								{
+									"key": "top",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "top",
+									"value": "10000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"Trip not found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?status={{statusAccepted}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "{{dueTimeAfter}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "{{dueTimeBefore}}",
+									"disabled": true
+								},
+								{
+									"key": "driverId",
+									"value": "{{driverId}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "{{puGeoSearchRadiusMiles}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "{{puGeoSearchCenterLat}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "{{puGeoSearchCenterLon}}",
+									"disabled": true
+								},
+								{
+									"key": "puCity",
+									"value": "{{puCity}}",
+									"disabled": true
+								},
+								{
+									"key": "puCounty",
+									"value": "{{puCounty}}",
+									"disabled": true
+								},
+								{
+									"key": "puState",
+									"value": "{{puState}}",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel1}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{statusAccepted}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by dueTimeAfterUTC without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeAfter={{dueTimeAfterInvalid2}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfter",
+									"value": "{{dueTimeAfterInvalid2}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by dueTimeBeforeUTC without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBefore={{dueTimeBeforeInvalid2}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBefore",
+									"value": "{{dueTimeBeforeInvalid2}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by dueTimeAfterUTC and dueTimeBeforeUTC without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"Trip not found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBefore={{dueTimeBeforeWNOTRIPSconfirmed}}&dueTimeAfter={{dueTimeAfterWNOTRIPSconfirmed}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "{{dueTimeAfter}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "{{dueTimeBefore}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBefore",
+									"value": "{{dueTimeBeforeWNOTRIPSconfirmed}}"
+								},
+								{
+									"key": "dueTimeAfter",
+									"value": "{{dueTimeAfterWNOTRIPSconfirmed}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by driverId without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?driverId={{driverIdInvalid}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "driverId",
+									"value": "{{driverIdInvalid}}"
+								},
+								{
+									"key": "driverId",
+									"value": "23",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by array of driverIds without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?driverIds=1,23",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "driverIds",
+									"value": "{{driverIdInvalid}}",
+									"disabled": true
+								},
+								{
+									"key": "driverIds",
+									"value": "1,23"
+								},
+								{
+									"key": "driverIds",
+									"value": "23",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by geographySearch without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\")});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puGeoSearchRadiusMiles={{puGeoSearchRadiusMiles}}&puGeoSearchCenterLat={{puGeoSearchCenterLatWithoutTrips}}&puGeoSearchCenterLon={{puGeoSearchCenterLonWithoutTrips}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "{{puGeoSearchRadiusMiles}}"
+								},
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "{{puGeoSearchCenterLatWithoutTrips}}"
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "{{puGeoSearchCenterLonWithoutTrips}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by puCity without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puCity={{PuCityInvalid1}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puCity",
+									"value": "{{PuCityInvalid1}}"
+								},
+								{
+									"key": "puCity",
+									"value": "$%",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by puCounty without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puCounty={{puCountyInvalid1}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puCounty",
+									"value": "{{puCountyInvalid1}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by puState without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puState=DD",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puState",
+									"value": "DD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by status without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?status={{statusOpen}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "{{statusOpen}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by serviceLevel without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?serviceLevel={{serviceLevel5}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "serviceLevel",
+									"value": "{{serviceLevel5}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by offset without trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });",
+									"",
+									"//pm.test(\"Status code name: Trip not found\", function () {",
+									"//    pm.response.to.have.body(\"No trips found\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?offset=10000000",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "10000000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by sortBy @parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?pucity=Alta Loma&sortBy=serviceLevelName&sortOrder=desc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "dueTime",
+									"disabled": true
+								},
+								{
+									"key": "top",
+									"value": "200",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "payDriver",
+									"disabled": true
+								},
+								{
+									"key": "pucity",
+									"value": "Alta Loma"
+								},
+								{
+									"key": "sortBy",
+									"value": "serviceLevelName"
+								},
+								{
+									"key": "sortOrder",
+									"value": "desc"
+								},
+								{
+									"key": "sortOrder",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid format dueTimeAfterTripLocalTime - without time offset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2efcd8e5-374b-4f1d-bce5-dbd650c5d60f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeAfterTripLocalTime=2020-03-20T11:53:00",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2020-03-20T11:53:00"
+								},
+								{
+									"key": "sortby",
+									"value": "duetime",
+									"disabled": true
+								},
+								{
+									"key": "sortorder",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid format dueTimeAfterTripLocalTime - with time offset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2efcd8e5-374b-4f1d-bce5-dbd650c5d60f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeAfterTripLocalTime=2020-03-20T11:53:00-07:00",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2020-03-20T11:53:00-07:00"
+								},
+								{
+									"key": "sortby",
+									"value": "duetime",
+									"disabled": true
+								},
+								{
+									"key": "sortorder",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid format dueTimeBeforeTripLocalTime - without time offset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2efcd8e5-374b-4f1d-bce5-dbd650c5d60f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBeforeTripLocalTime=2020-01-21T00:00:00&sortorder=desc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-01-21T00:00:00"
+								},
+								{
+									"key": "sortby",
+									"value": "duetime",
+									"disabled": true
+								},
+								{
+									"key": "sortorder",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid formatdueTimeBeforeTripLocalTime - with time offset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2efcd8e5-374b-4f1d-bce5-dbd650c5d60f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBeforeTripLocalTime=2020-01-21T00:00:00-06:00&sortorder=desc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-01-21T00:00:00-06:00"
+								},
+								{
+									"key": "sortby",
+									"value": "duetime",
+									"disabled": true
+								},
+								{
+									"key": "sortorder",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid dueTimeAfterTripLocalTime and dueTimeBeforeTripLocalTime - without time offset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2efcd8e5-374b-4f1d-bce5-dbd650c5d60f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBeforeTripLocalTime=2020-01-21T23:59:59&dueTimeAfterTripLocalTime=2020-01-21T00:00:00",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-03-01T23:59:59",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2020-03-01T00:00:00",
+									"disabled": true
+								},
+								{
+									"key": "sortby",
+									"value": "duetime",
+									"disabled": true
+								},
+								{
+									"key": "sortorder",
+									"value": "asc",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2019-12-06 14:20:00",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-02-04 22:00:00",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-01-21T23:59:59"
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2020-01-21T00:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "200 - Trips/Confirmed by valid dueTimeAfterTripLocalTime and dueTimeBeforeTripLocalTime - with time offset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () { ",
+									"    pm.response.to.have.status(200); });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2efcd8e5-374b-4f1d-bce5-dbd650c5d60f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBeforeTripLocalTime=2020-01-21T23:59:59-04:00&dueTimeAfterTripLocalTime=2020-01-21T00:00:00-07:00",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-01-21T23:59:59-04:00"
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2020-01-21T00:00:00-07:00"
+								},
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-03-28T17:00:00.000-04:00",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2020-03-15T11:53:00.000-07:00",
+									"disabled": true
+								},
+								{
+									"key": "sortby",
+									"value": "duetime",
+									"disabled": true
+								},
+								{
+									"key": "sortorder",
+									"value": "asc",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-03-28T17:00:00",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2020-03-15T11:53:00",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "400",
+			"item": [
+				{
+					"name": "400 - Trips/Confirmed by invalid format dueTimeAfterUTC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "{{dueTimeAfterInvalid1}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "232421",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "{{string}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "{{specialCharacter}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterUTC",
+									"value": "##\"$\"$",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid format dueTimeBeforeUTC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "{{dueTimeBeforeInvalid1}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "23324",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "{{string}}",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeUTC",
+									"value": "$%\"",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid driverId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?driverId={{string}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "driverId",
+									"value": "{{string}}"
+								},
+								{
+									"key": "driverId",
+									"value": "%%26",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid geographySearch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puGeoSearchCenterLat={{puGeoSearchCenterLat}}&puGeoSearchCenterLon={{puGeoSearchCenterLon}}&puGeoSearchRadiusMiles={{string}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "{{puGeoSearchCenterLat}}"
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "{{puGeoSearchCenterLon}}"
+								},
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "{{puGeoSearchRadiusMiles}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "{{string}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "{{string}}",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "{{string}}"
+								},
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "%#$%",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLat",
+									"value": "%#$%",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchCenterLon",
+									"value": "%#$%",
+									"disabled": true
+								},
+								{
+									"key": "puGeoSearchRadiusMiles",
+									"value": "{{puGeoSearchRadiusMilesDouble}}",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid format puState",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?puState=#%#\"%#%#\"%",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "puState",
+									"value": "{{puStateInvalid1}}",
+									"disabled": true
+								},
+								{
+									"key": "puState",
+									"value": "333",
+									"disabled": true
+								},
+								{
+									"key": "puState",
+									"value": "#%#\"%"
+								}
+							],
+							"hash": "%#\"%#%#\"%"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid format status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Trip not found\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?status={{StatusInvalid3}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "{{StatusInvalid1}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{StatusInvalid2}}",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "{{StatusInvalid3}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid format serviceLevel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?serviceLevel=324324",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "serviceLevel",
+									"value": "324324"
+								},
+								{
+									"key": "serviceLevel",
+									"value": "sdwqdwq",
+									"disabled": true
+								},
+								{
+									"key": "serviceLevel",
+									"value": "/()/",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid format offset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?offset={{specialCharacter}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "{{string}}",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "{{specialCharacter}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid format Top",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?top={{specialCharacter}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "top",
+									"value": "{{string}}",
+									"disabled": true
+								},
+								{
+									"key": "top",
+									"value": "{{specialCharacter}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid format dueTimeAfterTripLocalTime",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeAfterTripLocalTime=string",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "232421",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "string"
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "(((",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid format dueTimeBeforeTripLocalTime",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBeforeTripLocalTime=string",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "23324",
+									"disabled": true
+								},
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "string"
+								},
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "$%\"",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Trips/Confirmed by invalid range dueTimeAfterTripLocalTime and dueTimeBeforeTripLocalTime",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bef5015b-dfa8-4d2a-bf3c-dc116f114ce6",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () { ",
+									"    pm.response.to.have.status(400); });",
+									"",
+									"pm.test(\"Status code name: Invalid search parameters supplied\", function () {",
+									"    pm.response.to.have.body(\"Invalid search parameters supplied\"); });"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "2efcd8e5-374b-4f1d-bce5-dbd650c5d60f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/trips/confirmed/?dueTimeBeforeTripLocalTime=2020-03-01T00:00:00&dueTimeAfterTripLocalTime=2020-03-01T23:59:59",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"trips",
+								"confirmed",
+								""
+							],
+							"query": [
+								{
+									"key": "dueTimeBeforeTripLocalTime",
+									"value": "2020-03-01T00:00:00"
+								},
+								{
+									"key": "dueTimeAfterTripLocalTime",
+									"value": "2020-03-01T23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "56015089-d50c-40f0-b225-67d6f5c5a940",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "004bd16c-3170-4891-8b58-2dcfaeacae14",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessToken",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndpSEtLc1NkS2FTRkpCaHRYNUxfMm42WkNzNWFZY0M5TnNaelpUZXRKRFUifQ.eyJpc3MiOiJodHRwczovL2Nvc21vc3RlbmFudC5iMmNsb2dpbi5jb20vOTBjNWM5YTQtZDkyNy00ZDViLTliNWItNjhkZWI4NDU3Y2Y5L3YyLjAvIiwiZXhwIjoxNTg1ODU3MjU2LCJuYmYiOjE1ODU4NTM2NTYsImF1ZCI6ImZiNzA3MDRjLWJiYTEtNGY0My05NDI2LTk2YmI3ODkyYzlkNyIsInN1YiI6ImU1ODI0OTQ4LTVjZmEtNDU3Yy05YTUzLWI1YzNlMDNjMWZkOCIsInJvbGVzIjpbIjE0Il0sInBlcm1pc3Npb25zIjpbIjIyIiwiMjMiLCIyNCIsIjI1IiwiMjYiXSwib3JnYW5pemF0aW9uIjoiQW50aGVtVHJpcEludGFrZSIsInVzZXJuYW1lIjoibWRhYmF0LmJhdWZlc3RAZ21haWwuY29tIiwicHJvZ3JhbUlkcyI6WyI0NSIsIjkiXSwicHJvdmlkZXJJZCI6MjksInN0YXRlIjoiQVoiLCJwcm92aWRlck5hbWUiOiJUb3RhbCBSaWRlIEJyYW5kZWQgVmVoaWNsZS1XQyIsInNlcnZpY2VSZW1pbmRlck1ldGhvZCI6IlNNUyIsInVzZXJJZCI6MjM0NSwidGlkIjoiOTBjNWM5YTQtZDkyNy00ZDViLTliNWItNjhkZWI4NDU3Y2Y5Iiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwiYXpwIjoiYjU4MzVkZDYtMjUxMS00MzMwLWIwNzctZDQyMWIxMDViMTcwIiwidmVyIjoiMS4wIiwiaWF0IjoxNTg1ODUzNjU2fQ.u8sIItLGgdtgZ7L75Wa3FAloLKIVFKRZq55WWW5qEcUWfu8W96O-2aN_yPtAI0Ffq2tYUmGK5bHdymLiHDf_-rYscAKkEHNg-Qu2kMlZw8M29As8pVO0646yKIbOT2D0n7p28UF6kwmNZMXxKtgb_XwQN2CxOoymCxfqrZAqFRkCq8u26R_coTCpDAqdUBT2uq8wV2u-wMGci3hlYc1mllHE8gddaEr1kHOescDjSpA4AnwfrTPfv3_MQDI_JprZFGElCFj9N9ysKw9eKzJRuzUxh7JYUW2f4yVW0pAvLA2nTIPHxUDzOhlblU_HqIZbJ4DkAYWNEll-0T36gGJcew",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "67cabaad-40f1-4a2a-b085-bad51c03141d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c068d188-4297-4b5e-979d-bce6a0fdaa0d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
