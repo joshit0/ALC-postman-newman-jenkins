@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "948d8134-ef66-45da-ab30-78ed5131d74c",
+		"_postman_id": "946180a1-b014-41ab-8436-74ee682187f2",
 		"name": "Bolt API - Trips/Confirmed",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -2287,7 +2287,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{URL}}/trips/confirmed/?",
+							"raw": "{{URL}}/trips/confirmed/",
 							"host": [
 								"{{URL}}"
 							],
@@ -2355,7 +2355,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{URL}}/trips/confirmed/?",
+							"raw": "{{URL}}/trips/confirmed/",
 							"host": [
 								"{{URL}}"
 							],
@@ -2575,7 +2575,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{URL}}/trips/confirmed/?puState=#%#\"%#%#\"%",
+							"raw": "{{URL}}/trips/confirmed/?puState=%23%%23\"%#%#\"%#%#\"%",
 							"host": [
 								"{{URL}}"
 							],
@@ -3036,7 +3036,7 @@
 		"oauth2": [
 			{
 				"key": "accessToken",
-				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndpSEtLc1NkS2FTRkpCaHRYNUxfMm42WkNzNWFZY0M5TnNaelpUZXRKRFUifQ.eyJpc3MiOiJodHRwczovL2Nvc21vc3RlbmFudC5iMmNsb2dpbi5jb20vOTBjNWM5YTQtZDkyNy00ZDViLTliNWItNjhkZWI4NDU3Y2Y5L3YyLjAvIiwiZXhwIjoxNTg1ODU3MjU2LCJuYmYiOjE1ODU4NTM2NTYsImF1ZCI6ImZiNzA3MDRjLWJiYTEtNGY0My05NDI2LTk2YmI3ODkyYzlkNyIsInN1YiI6ImU1ODI0OTQ4LTVjZmEtNDU3Yy05YTUzLWI1YzNlMDNjMWZkOCIsInJvbGVzIjpbIjE0Il0sInBlcm1pc3Npb25zIjpbIjIyIiwiMjMiLCIyNCIsIjI1IiwiMjYiXSwib3JnYW5pemF0aW9uIjoiQW50aGVtVHJpcEludGFrZSIsInVzZXJuYW1lIjoibWRhYmF0LmJhdWZlc3RAZ21haWwuY29tIiwicHJvZ3JhbUlkcyI6WyI0NSIsIjkiXSwicHJvdmlkZXJJZCI6MjksInN0YXRlIjoiQVoiLCJwcm92aWRlck5hbWUiOiJUb3RhbCBSaWRlIEJyYW5kZWQgVmVoaWNsZS1XQyIsInNlcnZpY2VSZW1pbmRlck1ldGhvZCI6IlNNUyIsInVzZXJJZCI6MjM0NSwidGlkIjoiOTBjNWM5YTQtZDkyNy00ZDViLTliNWItNjhkZWI4NDU3Y2Y5Iiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwiYXpwIjoiYjU4MzVkZDYtMjUxMS00MzMwLWIwNzctZDQyMWIxMDViMTcwIiwidmVyIjoiMS4wIiwiaWF0IjoxNTg1ODUzNjU2fQ.u8sIItLGgdtgZ7L75Wa3FAloLKIVFKRZq55WWW5qEcUWfu8W96O-2aN_yPtAI0Ffq2tYUmGK5bHdymLiHDf_-rYscAKkEHNg-Qu2kMlZw8M29As8pVO0646yKIbOT2D0n7p28UF6kwmNZMXxKtgb_XwQN2CxOoymCxfqrZAqFRkCq8u26R_coTCpDAqdUBT2uq8wV2u-wMGci3hlYc1mllHE8gddaEr1kHOescDjSpA4AnwfrTPfv3_MQDI_JprZFGElCFj9N9ysKw9eKzJRuzUxh7JYUW2f4yVW0pAvLA2nTIPHxUDzOhlblU_HqIZbJ4DkAYWNEll-0T36gGJcew",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndpSEtLc1NkS2FTRkpCaHRYNUxfMm42WkNzNWFZY0M5TnNaelpUZXRKRFUifQ.eyJpc3MiOiJodHRwczovL2Nvc21vc3RlbmFudC5iMmNsb2dpbi5jb20vOTBjNWM5YTQtZDkyNy00ZDViLTliNWItNjhkZWI4NDU3Y2Y5L3YyLjAvIiwiZXhwIjoxNTg3NTA0MjkwLCJuYmYiOjE1ODc1MDA2OTAsImF1ZCI6ImZiNzA3MDRjLWJiYTEtNGY0My05NDI2LTk2YmI3ODkyYzlkNyIsInN1YiI6IjcyMWRhNTJkLWM5MDgtNGU1MS1hYzUyLWU3ZjMwNmQ5OTg1ZiIsInJvbGVzIjpbIjE0Il0sInBlcm1pc3Npb25zIjpbIjIyIiwiMjMiLCIyNCIsIjI1IiwiMjYiXSwib3JnYW5pemF0aW9uIjoiUFJPRFVDVCBURVNUIFBST1ZJREVSIFRYIiwidXNlcm5hbWUiOiJjYnJpb3p6b0BiYXVmZXN0LmNvbSIsInByb2dyYW1JZHMiOlsiNDYiLCI0NyIsIjQ4IiwiNDkiLCI1MCIsIjUxIiwiNDUiLCI5IiwiMTUiXSwicHJvdmlkZXJJZCI6MjE3LCJzdGF0ZSI6IlRYIiwicHJvdmlkZXJOYW1lIjoiUFJPRFVDVCBURVNUIFBST1ZJREVSIFRYIiwic2VydmljZVJlbWluZGVyTWV0aG9kIjoiU01TIiwidXNlcklkIjoyNzQxLCJ0aWQiOiI5MGM1YzlhNC1kOTI3LTRkNWItOWI1Yi02OGRlYjg0NTdjZjkiLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJhenAiOiJiNTgzNWRkNi0yNTExLTQzMzAtYjA3Ny1kNDIxYjEwNWIxNzAiLCJ2ZXIiOiIxLjAiLCJpYXQiOjE1ODc1MDA2OTB9.Gu8EnPdpC1GbWeVQQQH-7HEBPRy88OKR5hJYqRH7SALwVvmM51B5IFD90j4KA1zIWfe9Ov0AW_TmzvCwskjZeRz5T-3dU72qxQo3BZ_Dc5kTrlgA5kbpV_BNrCkIK-TdLh5-L2zJM6ueL7EITrpBeeOEepodUv8QtM_Ke3ADQUukwlSKBUjXJAljjMpCNnDAKq7Rd9CPU_9MidE7XJAJYnmFVDVnaQglI14vN5zrMnIkGqqAt-Zv6u0Lf8WX7zKLWkAI9mChVfjQ64wR2AtskzH_x7tCdsBAUBsbqCuuuhGB2MbiaSLr1kNitZxGM7YNyV5fTunXlg4ai6ubaYifjQ",
 				"type": "string"
 			},
 			{
